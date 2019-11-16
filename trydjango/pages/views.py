@@ -13,9 +13,9 @@ def home_view(request, *args, **kwargs):
 
 def contact_view(request, *args, **kwargs):
     print(request.user)
-    return HttpResponse("<h1>Contact Page</h1>")
+    return render(request, "contact.html", {})
 
 
 def about_view(request, *args, **kwargs):
     print(request)
-    return HttpResponse("<h1>Rory... he's a cool guy, I've heard")
+    return render(request, "about.html", {})
