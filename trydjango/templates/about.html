@@ -2,7 +2,13 @@
 <h1>About</h1>
 <h3>Rory... I heard he's a pretty cool guy</h3>
 <div>
-  {{my_text}}
+  {{my_text}}, {{my_number}}, {{my_list}}
 </div>
+
+<ul>
+  {% for i in my_list %}
+  <li>{{i}}</li>
+  {% endfor %}
+</ul>
 
 {% endblock content %}
