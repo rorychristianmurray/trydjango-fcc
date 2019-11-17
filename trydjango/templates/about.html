@@ -1,10 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 <h1>About</h1>
 <h3>Rory... I heard he's a pretty cool guy</h3>
-<h3>{{title | capfirst | upper}}</h3>
+<h3>{{title | capfirst | title}}</h3>
 <div>
   {{my_number}}, {{my_list}}
 </div>
+
+{{my_html|safe}}
 
 <ul>
   {% for i in my_list %} {% if i == 123 %}
