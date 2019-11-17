@@ -6,8 +6,16 @@
 </div>
 
 <ul>
+  {% for i in my_list %} {% if i == 123 %}
+  <li>{{forloop.counter}} - {{i|add:22}}</li>
+  {% else %}
+  <li>{{forloop.counter}} - {{i}}</li>
+  {% endif %} {% endfor %}
+</ul>
+
+<ul>
   {% for i in my_list %}
-  <li>{{i}}</li>
+  <li>{{forloop.counter}} - {{i|add:22}}</li>
   {% endfor %}
 </ul>
 
